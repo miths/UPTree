@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="UP-Tree",  # Replace with your own username
-    version="0.0.1",
+    version="0.0.2",
     author="Mithil Ghinaiya",
     author_email="mghinaiya@gmail.com",
     description="This is a simple module which takes input of transactions and provides it's UP-Tree, HeaderTable, and transactions dictionary",

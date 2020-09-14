@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: UP-Tree
-Version: 0.0.1
+Version: 0.0.2
 Summary: This is a simple module which takes input of transactions and provides it's UP-Tree, HeaderTable, and transactions dictionary
 Home-page: https://github.com/miths/UPTree
 Author: Mithil Ghinaiya
@@ -36,7 +36,7 @@ Description: # UP Tree
         
         ..
         
-        ![transaction.txt file](./img/transactions.png)
+        ![transaction.txt](https://github.com/miths/UPTree/blob/master/img/transactions.png)
         
         > **format:**
         
@@ -46,11 +46,11 @@ Description: # UP Tree
         
         profit(item3)
         
-        ..
+        profit(item4)
         
         ..
         
-        ![profit.txt file](./img/profit.png)
+        ![transaction.txt](https://github.com/miths/UPTree/blob/master/img/profit.png)
         
         Note: all item names should be numericals. Profit can be float or int. Profit value should be positive for all items. All quantity values should be greater than 0. All items must have a valid quantity in every transaction. All items must have profit value.
         
@@ -66,7 +66,7 @@ Description: # UP Tree
         
         can be printed by: `upTree.disp()`
         
-        ![profit.txt file](./img/uptree.png)
+        ![transaction.txt](https://github.com/miths/UPTree/blob/master/img/uptree.png)
         
         Each Node of UP-Tree displays following information: <item><item utility><number of occurences in database>
         
@@ -74,7 +74,7 @@ Description: # UP Tree
         
         can be printed by: `print(headerTable)`
         
-        ![profit.txt file](./img/headerTable.png)
+        ![transaction.txt](https://github.com/miths/UPTree/blob/master/img/headerTable.png)
         
         headerTable is a dictionary.
         key: item, value: [transaction weighted utility, head Node of item(Node.nextNode points to other node of same item)]
@@ -83,7 +83,7 @@ Description: # UP Tree
         
         can be printed by: `print(transactions)`
         
-        ![profit.txt file](./img/final_transaction.png)
+        ![transaction.txt](https://github.com/miths/UPTree/blob/master/img/final_transaction.png)
         
         transactions is a dictionary in decending order according to each item's transaction weighted utility
         
@@ -93,11 +93,11 @@ Description: # UP Tree
         
         > > definition
         
-        > > ![profit.txt file](./img/TWU_def.png)
+        > > ![transaction.txt](https://github.com/miths/UPTree/blob/master/img/TWU_def.png)
         
         > > eg for this case
         
-        > > ![profit.txt file](./img/TWU_ex.png)
+        > > ![transaction.txt](https://github.com/miths/UPTree/blob/master/img/TWU_ex.png)
         
 Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3
