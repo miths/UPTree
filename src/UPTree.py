@@ -31,7 +31,7 @@ def data_extraction(transPath, profitPath):
 
 
 def pre_proc(data1):
-    global trans_listItems, list_qty, mylist1, tot_listItems, trans_listItems_2
+    # global trans_listItems, list_qty, mylist1, tot_listItems, trans_listItems_2
     list_data = []
     trans_listItems = []
     list_qty = []
@@ -62,7 +62,7 @@ def list_profit_(data2):
     return list_profit
 
 
-def calc_TU(trans_listItems, list_profit):
+def calc_TU(trans_listItems, list_profit, list_qty):
     TU = {}
     for i in range(len(trans_listItems)):
         total = 0
@@ -209,7 +209,7 @@ def UPTree(transPath, profitPath):
     data1, data2 = data_extraction(transPath, profitPath)
     tot_listItems, trans_listItems, list_qty = pre_proc(data1)
     list_profit = list_profit_(data2)
-    TU = calc_TU(trans_listItems, list_profit)
+    TU = calc_TU(trans_listItems, list_profit, list_qty)
     trans = calcitem_utility(trans_listItems, list_qty, list_profit)
     TWU_ = calcTWU_(tot_listItems, trans, TU)
     TWU_sorted = calcTWU_sorted(TWU_)
