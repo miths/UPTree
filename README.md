@@ -20,29 +20,29 @@
 
 > **format:**
 
-> item1 item2 item3 item4:quantity(item1) quantity(item2) quantity(item3) quantity(item4)
+item1 item2 item3 item4 **:** quantity(item1) quantity(item2) quantity(item3) quantity(item4)
 
-> ..
+..
 
-> ..
+..
 
-> ..
+..
 
-> ![transaction.txt file](./img/transactions.png)
+![transaction.txt file](./img/transactions.png)
 
 > **format:**
 
-> profit(item1)
+profit(item1)
 
-> profit(item2)
+profit(item2)
 
-> profit(item3)
+profit(item3)
 
-> ..
+..
 
-> ..
+..
 
-> ![profit.txt file](./img/profit.png)
+![profit.txt file](./img/profit.png)
 
 Note: all item names should be numericals. Profit can be float or int. Profit value should be positive for all items. All quantity values should be greater than 0. All items must have a valid quantity in every transaction. All items must have profit value.
 
@@ -83,7 +83,7 @@ key: transaction number, value: dictionary(item : item utility)
 
 ## Transaction Weighted Utility
 
-> > defination
+> > definition
 
 > > ![profit.txt file](./img/TWU_def.png)
 
