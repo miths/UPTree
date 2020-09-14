@@ -17,18 +17,22 @@
 
 ### eg:
 
-> format:
+> **format:**
 > item1 item2 item3 item4:quantity(item1) quantity(item2) quantity(item3) quantity(item4)
 > ..
 > ..
 > ..
 > ![transaction.txt file](./img/transactions.png)
 
-> format:
+> **format:**
 > profit(item1)
+
 > profit(item2)
+
 > profit(item3)
+
 > ..
+
 > ..
 > ![profit.txt file](./img/profit.png)
 
