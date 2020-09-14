@@ -5,6 +5,7 @@
 ## usage:
 
 `upTree, headerTable, transanctions= UPTree(`transaction File path`, `profit file path`)`
+
 `upTree.disp()` # prints UP-Tree
 
 ### eg:
@@ -18,13 +19,19 @@
 ### eg:
 
 > **format:**
+
 > item1 item2 item3 item4:quantity(item1) quantity(item2) quantity(item3) quantity(item4)
+
 > ..
+
 > ..
+
 > ..
+
 > ![transaction.txt file](./img/transactions.png)
 
 > **format:**
+
 > profit(item1)
 
 > profit(item2)
@@ -34,6 +41,7 @@
 > ..
 
 > ..
+
 > ![profit.txt file](./img/profit.png)
 
 Note: all item names should be numericals. Profit can be float or int. Profit value should be positive for all items. All quantity values should be greater than 0. All items must have a valid quantity in every transaction. All items must have profit value.
@@ -49,26 +57,36 @@ function returns
 ### upTree
 
 can be printed by: `upTree.disp()`
+
 ![profit.txt file](./img/uptree.png)
+
 Each Node of UP-Tree displays following information: <item><item utility><number of occurences in database>
 
 ### headerTable
 
 can be printed by: `print(headerTable)`
+
 ![profit.txt file](./img/headerTable.png)
+
 headerTable is a dictionary.
 key: item, value: [transaction weighted utility, head Node of item(Node.nextNode points to other node of same item)]
 
 ### transactions
 
 can be printed by: `print(transactions)`
+
 ![profit.txt file](./img/final_transaction.png)
+
 transactions is a dictionary in decending order according to each item's transaction weighted utility
+
 key: transaction number, value: dictionary(item : item utility)
 
 ## Transaction Weighted Utility
 
 > > defination
+
 > > ![profit.txt file](./img/TWU_def.png)
+
 > > eg for this case
+
 > > ![profit.txt file](./img/TWU_ex.png)
