@@ -17,7 +17,7 @@ class treeNode:
         counter = self.count
 
     def disp(self, ind=1):
-        print(' '*ind, self.item, ' ', self.count)
+        print(' '*ind, self.item, ' ', self.count, ' ', self.num)
         for child in self.children.values():
             child.disp(ind+1)
 
