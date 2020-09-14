@@ -31,7 +31,6 @@ def data_extraction(transPath, profitPath):
 
 
 def pre_proc(data1):
-    # global trans_listItems, list_qty, mylist1, tot_listItems, trans_listItems_2
     list_data = []
     trans_listItems = []
     list_qty = []
@@ -84,7 +83,6 @@ def calcitem_utility(trans_listItems, list_qty, list_profit):
             temp[trans_listItems[i][j]] = prof
         trans[i+1] = temp
         temp = {}
-    # print('trans', trans)
     return trans
 
 
@@ -97,7 +95,6 @@ def calcTWU_(tot_listItems, trans, TU):
                 total = total+float(TU[j])
         TWU_[i] = total
         total = 0
-    # print('TWU_', TWU_)
     return TWU_
 
 
@@ -107,7 +104,6 @@ def calcTWU_sorted(TWU_):
     TWU_sorted = {}
     for i in sorted_by_value[::-1]:
         TWU_sorted[i[0]] = i[1]
-    # print('TWU_sorted', TWU_sorted)
     return TWU_sorted
 
 
@@ -136,12 +132,10 @@ def calcsort_trans(trans, TWU_sorted):
             trans_1[count] = temp
         if count in trans:
             del trans[count]
-    # print('trans_1', trans_1)
     return trans_1
 
 
 def make_headerTable(TWU_sorted):
-    # global headerTable
     headerTable = {}
     for i in TWU_sorted:
         headerTable[i] = [TWU_sorted[i], None]
@@ -156,8 +150,6 @@ def updateHeader(nodeToTest, targetNode):  # this version does not use recursion
 
 # dont consider hearderTable
 def updateTree(items, inTree, headerTable, count, trans_2, counte, tot_count):
-    # global counte
-    # global tot_count
     # remembers the profit till that item in perticular itemset
     tot_count = items[list(items)[0]]+tot_count
     # check if orderedItems[0] in retTree.children
@@ -189,10 +181,7 @@ def updateTree(items, inTree, headerTable, count, trans_2, counte, tot_count):
 
 
 def to_create_tree(trans_1, headerTable):
-    # global retTree, headerTable, trans_2, counte, count, items, tot_count
-
     trans_2 = copy.deepcopy(trans_1)
-
     # create tree                  ## dont consider hearderTable
     retTree = treeNode('Null Set', 1, None)
     counte = 0
@@ -216,10 +205,3 @@ def UPTree(transPath, profitPath):
     trans_1 = calcsort_trans(trans, TWU_sorted)
     headerTable = make_headerTable(TWU_sorted)
     return to_create_tree(trans_1, headerTable)
-
-
-retTree, headerTable, trans_1 = UPTree(
-    'D:\mithil ghinaiya\data_proj_1.txt', 'D:\mithil ghinaiya\profit1.txt')
-retTree.disp()
-print(headerTable)
-print(trans_1)
